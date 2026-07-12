@@ -54,7 +54,11 @@ function addMessage(text, role = 'bot', persist = true) {
 function renderMarkdown(text) {
   const escaped = escapeHtml(text);
 
-  const parsed = escaped
+  const withImages = escaped.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, alt, url) => {
+    return `<img src="${url.trim()}" alt="${alt.trim()}" />`;
+  });
+
+  const parsed = withImages
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>')
     .replace(/`(.*?)`/g, '<code>$1</code>')
