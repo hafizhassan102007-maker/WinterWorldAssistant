@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WinterWorld Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-badge">❄️</div>
+          <div>
+            <p class="eyebrow">WinterWorld Assistant</p>
+            <h1>Welcome to WinterWorld</h1>
+            <p class="subtitle">
+              Ask anything about bookings, availability, or support — our assistant is ready to help.
+            </p>
+          </div>
+        </div>
+        <div class="status-pill live" id="statusPill">Online now</div>
+      </header>
+
+      <section class="chat-card">
+        <div class="chat-header">
+          <div class="bot-avatar">❄️</div>
+          <div>
+            <h2>WinterWorld Assistant</h2>
+            <p>Friendly support for bookings and questions</p>
+          </div>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="message bot">
+            <span class="avatar">❄️</span>
+            <div class="bubble">
+              <p>Hello! I’m WinterWorld Assistant. I can help with bookings, questions, and support requests.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="composer" id="chatForm">
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Ask about your booking..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
