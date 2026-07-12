@@ -4,7 +4,7 @@ const messagesEl = document.getElementById('messages');
 const chatForm = document.getElementById('chatForm');
 const messageInput = document.getElementById('messageInput');
 const statusPill = document.getElementById('statusPill');
-const DEFAULT_WEBHOOK_URL = 'http://localhost:5678/webhook-test/e314dc59-419f-4cfa-af0e-0ee93cf094ae';
+const DEFAULT_WEBHOOK_URL = 'http://localhost:5678/webhook/e314dc59-419f-4cfa-af0e-0ee93cf094ae';
 
 let currentSessionId = '';
 
