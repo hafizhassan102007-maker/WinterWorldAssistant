@@ -128,6 +128,7 @@ async function sendToWebhook(message) {
       },
       body: JSON.stringify({
         chatInput: message,
+        sessionId: currentSessionId,
       }),
     });
 
